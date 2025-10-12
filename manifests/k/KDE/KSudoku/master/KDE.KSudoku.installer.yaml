@@ -1,0 +1,23 @@
+# Created with YamlCreate.ps1 Dumplings Mod
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.10.0.schema.json
+
+PackageIdentifier: KDE.KSudoku
+PackageVersion: master
+InstallerType: nullsoft
+UpgradeBehavior: install
+ProductCode: ksudoku
+Installers:
+- Architecture: x64
+  Scope: user
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/ksudoku/master/windows/ksudoku-master-904-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 3034FCE216C551BDCC9DA9DA9B879CC5CE611179060A3A07720A1F434C71AF7B
+  InstallerSwitches:
+    Custom: /CurrentUser
+- Architecture: x64
+  Scope: machine
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/ksudoku/master/windows/ksudoku-master-904-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 3034FCE216C551BDCC9DA9DA9B879CC5CE611179060A3A07720A1F434C71AF7B
+  InstallerSwitches:
+    Custom: /AllUsers
+ManifestType: installer
+ManifestVersion: 1.10.0

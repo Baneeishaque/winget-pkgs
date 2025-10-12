@@ -1,5 +1,5 @@
 # Created with YamlCreate.ps1 Dumplings Mod
-# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.9.0.schema.json
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.10.0.schema.json
 
 PackageIdentifier: KDE.Kontact
 PackageVersion: master
@@ -9,15 +9,15 @@ ProductCode: Kontact
 Installers:
 - Architecture: x64
   Scope: user
-  InstallerUrl: https://cdn.kde.org/ci-builds/pim/kontact/master/windows/kontact-master-1722-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: 0A56EA74D723C90907CA8BB6E6D574E5387F50B85517FFB41750A7BAD3DB8EEA
+  InstallerUrl: https://cdn.kde.org/ci-builds/pim/kontact/master/windows/kontact-master-2041-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 1888CDDA8791FA0BFFEB105D6170E76073A4334E76B691ABC524D595A4DA57A6
   InstallerSwitches:
     Custom: /CurrentUser
 - Architecture: x64
   Scope: machine
-  InstallerUrl: https://cdn.kde.org/ci-builds/pim/kontact/master/windows/kontact-master-1722-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: 0A56EA74D723C90907CA8BB6E6D574E5387F50B85517FFB41750A7BAD3DB8EEA
+  InstallerUrl: https://cdn.kde.org/ci-builds/pim/kontact/master/windows/kontact-master-2041-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 1888CDDA8791FA0BFFEB105D6170E76073A4334E76B691ABC524D595A4DA57A6
   InstallerSwitches:
     Custom: /AllUsers
 ManifestType: installer
-ManifestVersion: 1.9.0
+ManifestVersion: 1.10.0
