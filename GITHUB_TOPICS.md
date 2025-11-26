@@ -2,6 +2,8 @@
 
 This document provides recommended GitHub topics and tags for the Windows Package Manager Community Repository, along with various methods to add them.
 
+> **Note:** Replace `OWNER` with your GitHub username or organization name (e.g., `Baneeishaque` or `microsoft`) throughout the examples below.
+
 ## Recommended GitHub Topics
 
 Based on the analysis of this repository, the following topics are recommended:
@@ -71,40 +73,40 @@ gh auth login
 
 **Set all topics at once (replaces existing topics):**
 ```bash
-gh repo edit Baneeishaque/winget-pkgs --add-topic "winget,winget-pkgs,windows-package-manager,package-manager,windows,microsoft,yaml,manifest,packages,software-distribution,winget-cli,windows-installer,msix,msi,appx,hacktoberfest,open-source,community,package-repository"
+gh repo edit OWNER/winget-pkgs --add-topic "winget,winget-pkgs,windows-package-manager,package-manager,windows,microsoft,yaml,manifest,packages,software-distribution,winget-cli,windows-installer,msix,msi,appx,hacktoberfest,open-source,community,package-repository"
 ```
 
 **Add individual topics:**
 ```bash
-gh repo edit Baneeishaque/winget-pkgs --add-topic winget
-gh repo edit Baneeishaque/winget-pkgs --add-topic winget-pkgs
-gh repo edit Baneeishaque/winget-pkgs --add-topic windows-package-manager
-gh repo edit Baneeishaque/winget-pkgs --add-topic package-manager
-gh repo edit Baneeishaque/winget-pkgs --add-topic windows
-gh repo edit Baneeishaque/winget-pkgs --add-topic microsoft
-gh repo edit Baneeishaque/winget-pkgs --add-topic yaml
-gh repo edit Baneeishaque/winget-pkgs --add-topic manifest
-gh repo edit Baneeishaque/winget-pkgs --add-topic packages
-gh repo edit Baneeishaque/winget-pkgs --add-topic software-distribution
-gh repo edit Baneeishaque/winget-pkgs --add-topic winget-cli
-gh repo edit Baneeishaque/winget-pkgs --add-topic windows-installer
-gh repo edit Baneeishaque/winget-pkgs --add-topic msix
-gh repo edit Baneeishaque/winget-pkgs --add-topic msi
-gh repo edit Baneeishaque/winget-pkgs --add-topic appx
-gh repo edit Baneeishaque/winget-pkgs --add-topic hacktoberfest
-gh repo edit Baneeishaque/winget-pkgs --add-topic open-source
-gh repo edit Baneeishaque/winget-pkgs --add-topic community
-gh repo edit Baneeishaque/winget-pkgs --add-topic package-repository
+gh repo edit OWNER/winget-pkgs --add-topic winget
+gh repo edit OWNER/winget-pkgs --add-topic winget-pkgs
+gh repo edit OWNER/winget-pkgs --add-topic windows-package-manager
+gh repo edit OWNER/winget-pkgs --add-topic package-manager
+gh repo edit OWNER/winget-pkgs --add-topic windows
+gh repo edit OWNER/winget-pkgs --add-topic microsoft
+gh repo edit OWNER/winget-pkgs --add-topic yaml
+gh repo edit OWNER/winget-pkgs --add-topic manifest
+gh repo edit OWNER/winget-pkgs --add-topic packages
+gh repo edit OWNER/winget-pkgs --add-topic software-distribution
+gh repo edit OWNER/winget-pkgs --add-topic winget-cli
+gh repo edit OWNER/winget-pkgs --add-topic windows-installer
+gh repo edit OWNER/winget-pkgs --add-topic msix
+gh repo edit OWNER/winget-pkgs --add-topic msi
+gh repo edit OWNER/winget-pkgs --add-topic appx
+gh repo edit OWNER/winget-pkgs --add-topic hacktoberfest
+gh repo edit OWNER/winget-pkgs --add-topic open-source
+gh repo edit OWNER/winget-pkgs --add-topic community
+gh repo edit OWNER/winget-pkgs --add-topic package-repository
 ```
 
 **Remove a topic:**
 ```bash
-gh repo edit Baneeishaque/winget-pkgs --remove-topic <topic-name>
+gh repo edit OWNER/winget-pkgs --remove-topic <topic-name>
 ```
 
 **View current topics:**
 ```bash
-gh repo view Baneeishaque/winget-pkgs --json repositoryTopics
+gh repo view OWNER/winget-pkgs --json repositoryTopics
 ```
 
 ---
@@ -121,7 +123,7 @@ curl -L \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: Bearer YOUR_GITHUB_TOKEN" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/repos/Baneeishaque/winget-pkgs/topics
+  https://api.github.com/repos/OWNER/winget-pkgs/topics
 ```
 
 **Replace all topics:**
@@ -131,7 +133,7 @@ curl -L \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: Bearer YOUR_GITHUB_TOKEN" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/repos/Baneeishaque/winget-pkgs/topics \
+  https://api.github.com/repos/OWNER/winget-pkgs/topics \
   -d '{"names":["winget","winget-pkgs","windows-package-manager","package-manager","windows","microsoft","yaml","manifest","packages","software-distribution","winget-cli","windows-installer","msix","msi","appx","hacktoberfest","open-source","community","package-repository"]}'
 ```
 
@@ -139,7 +141,7 @@ curl -L \
 
 ### Method 3: GitHub Web Interface
 
-1. Navigate to your repository: https://github.com/Baneeishaque/winget-pkgs
+1. Navigate to your repository: `https://github.com/OWNER/winget-pkgs`
 2. Click on the ⚙️ **gear icon** next to "About" on the right sidebar
 3. In the "Topics" field, enter topics separated by spaces or commas
 4. Click **Save changes**
@@ -158,7 +160,7 @@ For more advanced use cases, you can use the GraphQL API.
 #### Query to get repository ID:
 ```graphql
 query {
-  repository(owner: "Baneeishaque", name: "winget-pkgs") {
+  repository(owner: "OWNER", name: "winget-pkgs") {
     id
     repositoryTopics(first: 20) {
       nodes {
@@ -230,7 +232,7 @@ from github import Github
 g = Github("YOUR_GITHUB_TOKEN")
 
 # Get the repository
-repo = g.get_repo("Baneeishaque/winget-pkgs")
+repo = g.get_repo("OWNER/winget-pkgs")
 
 # Define topics
 topics = [
@@ -302,7 +304,7 @@ async function setTopics() {
   ];
 
   await octokit.repos.replaceAllTopics({
-    owner: "Baneeishaque",
+    owner: "OWNER",
     repo: "winget-pkgs",
     names: topics
   });
@@ -324,7 +326,7 @@ npm install @octokit/rest
 
 ```powershell
 $token = "YOUR_GITHUB_TOKEN"
-$owner = "Baneeishaque"
+$owner = "OWNER"  # Replace with your GitHub username or organization
 $repo = "winget-pkgs"
 
 $topics = @(
