@@ -1,0 +1,446 @@
+# Instincts generated from https://github.com/Baneeishaque/winget-pkgs
+# Generated: 2026-02-26T08:23:33.415Z
+# Version: 2.0
+
+---
+id: winget-pkgs-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Commit Length
+
+## Action
+
+Write moderate-length commit messages (~50 characters)
+
+## Evidence
+
+- Average commit message length: 60 chars
+- Based on 200 commits
+
+---
+id: winget-pkgs-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: winget-pkgs-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: winget-pkgs-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: winget-pkgs-workflow-new-package-version
+trigger: "when doing new package version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow New Package Version
+
+## Action
+
+Follow the new-package-version workflow:
+1. Create version directory under manifests/{first-letter}/{publisher}/{package}/{version}/
+2. Add installer manifest (.installer.yaml)
+3. Add English locale manifest (.locale.en-US.yaml)
+4. Add main package manifest (.yaml)
+5. Optionally add additional locale manifests (zh-CN, nb-NO, etc.)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~50x per month
+- Files: manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.installer.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.locale.en-US.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.yaml
+
+---
+id: winget-pkgs-workflow-multi-locale-package-version
+trigger: "when doing multi locale package version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Multi Locale Package Version
+
+## Action
+
+Follow the multi-locale-package-version workflow:
+1. Create standard package manifests (installer, en-US locale, main)
+2. Add Chinese locale manifest (.locale.zh-CN.yaml)
+3. Optionally add other locale manifests (nb-NO, ja-JP, zh-TW, en-GB)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~20x per month
+- Files: manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.locale.zh-CN.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.locale.nb-NO.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.locale.ja-JP.yaml
+
+---
+id: winget-pkgs-workflow-jetbrains-ide-update
+trigger: "when doing jetbrains ide update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Jetbrains Ide Update
+
+## Action
+
+Follow the jetbrains-ide-update workflow:
+1. Create EAP version directory with build number
+2. Add installer manifest for EAP version
+3. Add English and Chinese locale manifests
+4. Add main EAP manifest
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: manifests/j/JetBrains/{IDE}/EAP/{build}/{publisher}.{package}.EAP.installer.yaml, manifests/j/JetBrains/{IDE}/EAP/{build}/{publisher}.{package}.EAP.locale.en-US.yaml, manifests/j/JetBrains/{IDE}/EAP/{build}/{publisher}.{package}.EAP.locale.zh-CN.yaml
+
+---
+id: winget-pkgs-workflow-duck-studio-tools-update
+trigger: "when doing duck studio tools update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Duck Studio Tools Update
+
+## Action
+
+Follow the duck-studio-tools-update workflow:
+1. Create version directory with date-based versioning
+2. Add installer manifest
+3. Add comprehensive locale support (en-US, en-GB, ja-JP, zh-CN, zh-TW)
+4. Add main manifest
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: manifests/d/DuckStudio/FufuDevTools/{date-version}/DuckStudio.FufuDevTools.locale.en-GB.yaml, manifests/d/DuckStudio/FufuDevTools/{date-version}/DuckStudio.FufuDevTools.locale.ja-JP.yaml, manifests/d/DuckStudio/FufuDevTools/{date-version}/DuckStudio.FufuDevTools.locale.zh-TW.yaml
+
+---
+id: winget-pkgs-workflow-repeated-package-updates
+trigger: "when doing repeated package updates"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Repeated Package Updates
+
+## Action
+
+Follow the repeated-package-updates workflow:
+1. Create new version directory for incremental version
+2. Update installer manifest with new version details
+3. Update locale manifests
+4. Update main package manifest
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~10x per month
+- Files: manifests/d/DoltHub/Dolt/{version}/DoltHub.Dolt.installer.yaml, manifests/d/DifferentAI/OpenWork/{version}/DifferentAI.OpenWork.installer.yaml
+
+---
+id: winget-new-version-commit
+trigger: "When adding a new package version"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget New Version Commit
+
+## Action
+
+Format commit as 'New version: {Publisher}.{Package} version {Version} (#{PR})'
+
+## Evidence
+
+- All 8 example commits follow this exact pattern
+- Consistent across different publishers
+
+---
+id: winget-pascal-case-files
+trigger: "When creating manifest files"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pascal Case Files
+
+## Action
+
+Use PascalCase for file naming: {Publisher}.{Package}.{type}.yaml
+
+## Evidence
+
+- All manifest files use PascalCase pattern
+- Consistent across installer, locale, and main manifests
+
+---
+id: winget-camel-case-functions
+trigger: "When writing TypeScript functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Camel Case Functions
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Detected camelCase pattern for functions in codeStyle analysis
+
+---
+id: winget-screaming-snake-constants
+trigger: "When defining constants in TypeScript"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Detected SCREAMING_SNAKE_CASE pattern for constants
+
+---
+id: winget-three-manifest-minimum
+trigger: "When adding a new package version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Three Manifest Minimum
+
+## Action
+
+Create minimum 3 manifests: .installer.yaml, .locale.en-US.yaml, .yaml
+
+## Evidence
+
+- All new-package-version workflows include these 3 files
+- Standard pattern across 50+ daily updates
+
+---
+id: winget-alphabetical-folder-structure
+trigger: "When creating package directory"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Alphabetical Folder Structure
+
+## Action
+
+Use first letter of publisher for folder structure: manifests/{first-letter}/{publisher}/{package}/
+
+## Evidence
+
+- Consistent folder pattern in all workflow examples
+- JetBrains under 'j/', DuckStudio under 'd/'
+
+---
+id: winget-chinese-locale-common
+trigger: "When package supports multiple locales"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Chinese Locale Common
+
+## Action
+
+Add .locale.zh-CN.yaml manifest for Chinese support
+
+## Evidence
+
+- Chinese locale appears in multi-locale workflows
+- JetBrains and DuckStudio both include zh-CN
+
+---
+id: winget-eap-build-numbering
+trigger: "When updating JetBrains EAP versions"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Eap Build Numbering
+
+## Action
+
+Use build number as version identifier and include 'EAP' in manifest names
+
+## Evidence
+
+- JetBrains workflow uses EAP build numbers
+- EAP appears in manifest file names
+
+---
+id: winget-date-versioning-pattern
+trigger: "When updating DuckStudio FufuDevTools"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Date Versioning Pattern
+
+## Action
+
+Use date-based versioning format for version directories
+
+## Evidence
+
+- DuckStudio workflow specifically mentions date-version pattern
+
+---
+id: winget-extensive-locale-support
+trigger: "When updating DuckStudio packages"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Extensive Locale Support
+
+## Action
+
+Add comprehensive locale manifests: en-US, en-GB, ja-JP, zh-CN, zh-TW
+
+## Evidence
+
+- DuckStudio workflow shows 5 different locale files
+- Highest confidence workflow at 0.95
+
+---
+id: winget-frequent-update-packages
+trigger: "When updating DoltHub.Dolt or DifferentAI.OpenWork"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Frequent Update Packages
+
+## Action
+
+Use quick incremental version updates with standard 3-manifest pattern
+
+## Evidence
+
+- These packages appear in repeated-package-updates workflow
+- 10+ updates per week frequency
+
+---
+id: winget-pr-number-in-commit
+trigger: "When committing new package versions"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pr Number In Commit
+
+## Action
+
+Include PR number in parentheses at end of commit message
+
+## Evidence
+
+- All 8 commit examples include (#XXXXX) pattern
+- Consistent PR numbering format
+
