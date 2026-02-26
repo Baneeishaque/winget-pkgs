@@ -1,0 +1,491 @@
+# Instincts generated from https://github.com/Baneeishaque/winget-pkgs
+# Generated: 2026-02-26T20:23:29.535Z
+# Version: 2.0
+
+---
+id: winget-pkgs-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Commit Length
+
+## Action
+
+Write moderate-length commit messages (~50 characters)
+
+## Evidence
+
+- Average commit message length: 58 chars
+- Based on 200 commits
+
+---
+id: winget-pkgs-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: winget-pkgs-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: winget-pkgs-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: winget-pkgs-workflow-new-package-version-release
+trigger: "when doing new package version release"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow New Package Version Release
+
+## Action
+
+Follow the new-package-version-release workflow:
+1. Create version-specific directory
+2. Add installer manifest
+3. Add English locale manifest
+4. Add main package manifest
+5. Optionally add additional locale manifests
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~40x per month
+- Files: manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.installer.yaml, manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.locale.en-US.yaml, manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.yaml
+
+---
+id: winget-pkgs-workflow-new-package-creation
+trigger: "when doing new package creation"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow New Package Creation
+
+## Action
+
+Follow the new-package-creation workflow:
+1. Create package directory structure
+2. Add installer manifest
+3. Add English locale manifest
+4. Add main package manifest
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.installer.yaml, manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.locale.en-US.yaml, manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.yaml
+
+---
+id: winget-pkgs-workflow-package-version-removal
+trigger: "when doing package version removal"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Package Version Removal
+
+## Action
+
+Follow the package-version-removal workflow:
+1. Remove installer manifest
+2. Remove all locale manifests
+3. Remove main package manifest
+4. Clean up version directory
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.installer.yaml, manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.locale.*.yaml, manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.yaml
+
+---
+id: winget-pkgs-workflow-package-metadata-update
+trigger: "when doing package metadata update"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Package Metadata Update
+
+## Action
+
+Follow the package-metadata-update workflow:
+1. Modify installer manifest
+2. Update locale manifests as needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.installer.yaml, manifests/{letter}/{vendor}/{package}/{version}/{vendor}.{package}.locale.*.yaml
+
+---
+id: winget-pkgs-workflow-multi-locale-firefox-release
+trigger: "when doing multi locale firefox release"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Multi Locale Firefox Release
+
+## Action
+
+Follow the multi-locale-firefox-release workflow:
+1. Create version directory for each locale
+2. Add installer manifest for each locale
+3. Add English and Chinese locale manifests
+4. Add main package manifest for each locale
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: manifests/m/Mozilla/Firefox/DeveloperEdition/{locale}/{version}/*.yaml
+
+---
+id: winget-pkgs-workflow-elastic-stack-synchronized-release
+trigger: "when doing elastic stack synchronized release"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Elastic Stack Synchronized Release
+
+## Action
+
+Follow the elastic-stack-synchronized-release workflow:
+1. Update each Elastic component
+2. Add installer and locale manifests
+3. Ensure version consistency across all components
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: manifests/e/Elastic/{component}/{version}/Elastic.{component}.*.yaml
+
+---
+id: winget-commit-format-update
+trigger: "When updating an existing package version"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Commit Format Update
+
+## Action
+
+Format commit message as 'Update: {Vendor}.{Package} version {Version} (#{PRNumber})'
+
+## Evidence
+
+- Update: IBM.Semeru.17.JRE version 17.0.18.8 (#343120)
+- Consistent pattern across 40+ daily commits
+
+---
+id: winget-commit-format-new-version
+trigger: "When adding a new version of an existing package"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Commit Format New Version
+
+## Action
+
+Format commit message as 'New version: {Vendor}.{Package} version {Version} (#{PRNumber})'
+
+## Evidence
+
+- New version: Mozilla.Firefox.DeveloperEdition.be version 149.0 (149.0b1) (#343178)
+- Multiple Firefox and package examples
+
+---
+id: winget-commit-format-release-notes
+trigger: "When updating release notes for a package"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Commit Format Release Notes
+
+## Action
+
+Format commit message as 'ReleaseNotes: {Vendor}.{Package} version {Version} (#{PRNumber})'
+
+## Evidence
+
+- ReleaseNotes: 8x8.Work version 8.31.3 (#342757)
+
+---
+id: winget-file-naming-pascal-case
+trigger: "When creating manifest files"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget File Naming Pascal Case
+
+## Action
+
+Use PascalCase for filenames following pattern {Vendor}.{Package}.{Type}.yaml
+
+## Evidence
+
+- TypeScript naming conventions: PascalCase for files
+- Manifest file structure patterns
+
+---
+id: winget-camel-case-functions
+trigger: "When defining functions in TypeScript code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Camel Case Functions
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- TypeScript naming conventions: camelCase for functions
+
+---
+id: winget-screaming-snake-constants
+trigger: "When defining constants in TypeScript code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE naming convention
+
+## Evidence
+
+- TypeScript naming conventions: SCREAMING_SNAKE_CASE for constants
+
+---
+id: winget-manifest-directory-structure
+trigger: "When adding a new package version"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Manifest Directory Structure
+
+## Action
+
+Create directory structure manifests/{first-letter}/{vendor}/{package}/{version}/
+
+## Evidence
+
+- Consistent across all workflow patterns
+- 40+ daily commits follow this structure
+
+---
+id: winget-three-manifest-minimum
+trigger: "When adding any new package version"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Three Manifest Minimum
+
+## Action
+
+Create minimum three files: installer.yaml, locale.en-US.yaml, and main.yaml
+
+## Evidence
+
+- Required in new-package-version-release workflow
+- Pattern in new-package-creation workflow
+
+---
+id: winget-firefox-multi-locale-batch
+trigger: "When updating Firefox Developer Edition"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Firefox Multi Locale Batch
+
+## Action
+
+Process multiple locale variants (ar, ast, be, cs) in coordinated batch commits
+
+## Evidence
+
+- New version: Mozilla.Firefox.DeveloperEdition.be/cs/ast/ar version 149.0
+- Multi-locale-firefox-release workflow frequency
+
+---
+id: winget-elastic-synchronized-release
+trigger: "When updating Elastic stack components"
+confidence: 0.82
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Elastic Synchronized Release
+
+## Action
+
+Update all related components (Packetbeat, etc.) with same version number simultaneously
+
+## Evidence
+
+- New version: Elastic.Packetbeat version 9.3.1
+- Elastic-stack-synchronized-release workflow pattern
+
+---
+id: winget-version-specific-directory
+trigger: "When any package operation is performed"
+confidence: 0.95
+domain: architecture
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Version Specific Directory
+
+## Action
+
+Always organize files within version-specific directories
+
+## Evidence
+
+- All workflow patterns use version directories
+- Consistent across manifests folder structure
+
+---
+id: winget-pr-number-in-commit
+trigger: "When committing any package changes"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pr Number In Commit
+
+## Action
+
+Always include PR number in format (#{number}) at end of commit message
+
+## Evidence
+
+- (#343120)
+- (#342757)
+- (#343178) - consistent across all example commits
+
+---
+id: winget-vendor-package-dot-notation
+trigger: "When referencing packages in commits or filenames"
+confidence: 0.95
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Vendor Package Dot Notation
+
+## Action
+
+Use dot notation format {Vendor}.{Package} consistently
+
+## Evidence
+
+- IBM.Semeru.17.JRE
+- Mozilla.Firefox.DeveloperEdition
+- Elastic.Packetbeat - consistent pattern
+
