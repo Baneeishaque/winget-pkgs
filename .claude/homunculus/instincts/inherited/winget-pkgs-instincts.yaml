@@ -1,0 +1,475 @@
+# Instincts generated from https://github.com/Baneeishaque/winget-pkgs
+# Generated: 2026-02-26T02:23:31.605Z
+# Version: 2.0
+
+---
+id: winget-pkgs-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Commit Length
+
+## Action
+
+Write moderate-length commit messages (~50 characters)
+
+## Evidence
+
+- Average commit message length: 61 chars
+- Based on 200 commits
+
+---
+id: winget-pkgs-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: winget-pkgs-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: winget-pkgs-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: winget-pkgs-workflow-new-package-version
+trigger: "when doing new package version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow New Package Version
+
+## Action
+
+Follow the new-package-version workflow:
+1. Create installer.yaml with download URLs and install methods
+2. Create locale.en-US.yaml with package metadata and descriptions
+3. Create main .yaml with basic package information
+4. Add additional locale files if package supports multiple languages
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~40x per month
+- Files: manifests/{first-letter}/{publisher}/{package}/{version}/{Publisher.Package}.installer.yaml, manifests/{first-letter}/{publisher}/{package}/{version}/{Publisher.Package}.locale.en-US.yaml, manifests/{first-letter}/{publisher}/{package}/{version}/{Publisher.Package}.yaml
+
+---
+id: winget-pkgs-workflow-new-package-creation
+trigger: "when doing new package creation"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow New Package Creation
+
+## Action
+
+Follow the new-package-creation workflow:
+1. Create installer.yaml with download URLs and install methods
+2. Create locale.en-US.yaml with package metadata and descriptions
+3. Create main .yaml with basic package information
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: manifests/{first-letter}/{publisher}/{package}/{version}/{Publisher.Package}.installer.yaml, manifests/{first-letter}/{publisher}/{package}/{version}/{Publisher.Package}.locale.en-US.yaml, manifests/{first-letter}/{publisher}/{package}/{version}/{Publisher.Package}.yaml
+
+---
+id: winget-pkgs-workflow-mozilla-thunderbird-localized-version
+trigger: "when doing mozilla thunderbird localized version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Mozilla Thunderbird Localized Version
+
+## Action
+
+Follow the mozilla-thunderbird-localized-version workflow:
+1. Create installer.yaml for the specific locale version
+2. Create locale.en-US.yaml with English metadata
+3. Create locale.zh-CN.yaml with Chinese metadata
+4. Create main .yaml with basic package information
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~10x per month
+- Files: manifests/m/Mozilla/Thunderbird/{variant}/{locale}/{version}/Mozilla.Thunderbird.{variant}.{locale}.installer.yaml, manifests/m/Mozilla/Thunderbird/{variant}/{locale}/{version}/Mozilla.Thunderbird.{variant}.{locale}.locale.en-US.yaml, manifests/m/Mozilla/Thunderbird/{variant}/{locale}/{version}/Mozilla.Thunderbird.{variant}.{locale}.locale.zh-CN.yaml
+
+---
+id: winget-pkgs-workflow-mozilla-firefox-localized-version
+trigger: "when doing mozilla firefox localized version"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Mozilla Firefox Localized Version
+
+## Action
+
+Follow the mozilla-firefox-localized-version workflow:
+1. Create installer.yaml for the specific locale version
+2. Create multiple locale.{language}.yaml files for different languages
+3. Create main .yaml with basic package information
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: manifests/m/Mozilla/Firefox/{locale}/{version}/Mozilla.Firefox.{locale}.installer.yaml, manifests/m/Mozilla/Firefox/{locale}/{version}/Mozilla.Firefox.{locale}.locale.{language}.yaml, manifests/m/Mozilla/Firefox/{locale}/{version}/Mozilla.Firefox.{locale}.yaml
+
+---
+id: winget-pkgs-workflow-speakeasy-cli-version
+trigger: "when doing speakeasy cli version"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Speakeasy Cli Version
+
+## Action
+
+Follow the speakeasy-cli-version workflow:
+1. Create installer.yaml with new CLI version
+2. Create locale.en-US.yaml with updated metadata
+3. Create main .yaml with version information
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: manifests/s/Speakeasy/speakeasy/{version}/Speakeasy.speakeasy.installer.yaml, manifests/s/Speakeasy/speakeasy/{version}/Speakeasy.speakeasy.locale.en-US.yaml, manifests/s/Speakeasy/speakeasy/{version}/Speakeasy.speakeasy.yaml
+
+---
+id: winget-pkgs-workflow-package-removal
+trigger: "when doing package removal"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Package Removal
+
+## Action
+
+Follow the package-removal workflow:
+1. Remove installer.yaml file
+2. Remove locale.en-US.yaml file
+3. Remove main .yaml file
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: manifests/{first-letter}/{publisher}/{package}/{version}/{Publisher.Package}.installer.yaml, manifests/{first-letter}/{publisher}/{package}/{version}/{Publisher.Package}.locale.en-US.yaml, manifests/{first-letter}/{publisher}/{package}/{version}/{Publisher.Package}.yaml
+
+---
+id: winget-pkgs-naming-files
+trigger: "When creating new manifest files"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Naming Files
+
+## Action
+
+Use PascalCase format: {Publisher.Package}.{type}.yaml
+
+## Evidence
+
+- Mozilla.Firefox.locale.installer.yaml pattern
+- Speakeasy.speakeasy.yaml pattern
+- All manifest files follow Publisher.Package convention
+
+---
+id: winget-pkgs-commit-format-update
+trigger: "When updating an existing package version"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Commit Format Update
+
+## Action
+
+Start commit with 'Update:' or 'New version:' prefix followed by package name and version
+
+## Evidence
+
+- Update: Servo.Servo.Nightly version 1.0
+- New version: Microsoft.Azure.StorageExplorer version 1.41.1
+- New version: Brave.Brave version 145.1.87.191
+
+---
+id: winget-pkgs-commit-format-fix
+trigger: "When fixing package issues"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Commit Format Fix
+
+## Action
+
+Start commit with 'Fix:' prefix followed by package name and version
+
+## Evidence
+
+- Fix: XnSoft.XnViewMP version 1.9.10.0 (#342759)
+
+---
+id: winget-pkgs-commit-format-notes
+trigger: "When adding release notes to packages"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Commit Format Notes
+
+## Action
+
+Start commit with 'ReleaseNotes:' prefix followed by package name and version
+
+## Evidence
+
+- ReleaseNotes: GoTo.LogMeInResolveDesktopConsole version 1.16.0.67 (#342763)
+
+---
+id: winget-pkgs-folder-structure
+trigger: "When creating package manifests"
+confidence: 0.95
+domain: architecture
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Folder Structure
+
+## Action
+
+Place files in manifests/{first-letter}/{publisher}/{package}/{version}/ structure
+
+## Evidence
+
+- All workflow patterns show this structure
+- manifests/m/Mozilla/Firefox/{locale}/{version}/ pattern
+- manifests/s/Speakeasy/speakeasy/{version}/ pattern
+
+---
+id: winget-pkgs-three-file-pattern
+trigger: "When creating a new package version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Three File Pattern
+
+## Action
+
+Create three files: .installer.yaml, .locale.en-US.yaml, and main .yaml
+
+## Evidence
+
+- new-package-version workflow shows all 3 files
+- new-package-creation workflow shows same pattern
+- speakeasy-cli-version workflow follows same pattern
+
+---
+id: winget-pkgs-installer-first
+trigger: "When creating package manifest files"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Installer First
+
+## Action
+
+Start with installer.yaml containing download URLs and install methods
+
+## Evidence
+
+- All workflows start with 'Create installer.yaml'
+- Consistent first step across new-package-version, new-package-creation, mozilla patterns
+
+---
+id: winget-pkgs-locale-metadata
+trigger: "When creating package metadata"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Locale Metadata
+
+## Action
+
+Create locale.en-US.yaml with package metadata and descriptions
+
+## Evidence
+
+- Second step in new-package-version workflow
+- Second step in new-package-creation workflow
+- Pattern across all major workflows
+
+---
+id: winget-pkgs-mozilla-special-structure
+trigger: "When updating Mozilla Firefox or Thunderbird"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Mozilla Special Structure
+
+## Action
+
+Use variant/locale subdirectories and create multiple locale files
+
+## Evidence
+
+- mozilla-thunderbird-localized-version shows {variant}/{locale} structure
+- mozilla-firefox-localized-version shows {locale} structure
+- Both create multiple locale.{language}.yaml files
+
+---
+id: winget-pkgs-multi-locale-support
+trigger: "When package supports multiple languages"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Multi Locale Support
+
+## Action
+
+Add additional locale.{locale}.yaml files for each supported language
+
+## Evidence
+
+- new-package-version workflow mentions 'Add additional locale files if package supports multiple languages'
+- Mozilla workflows show locale.zh-CN.yaml and other locale files
+
+---
+id: winget-pkgs-removal-reverse-order
+trigger: "When removing a package version"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Removal Reverse Order
+
+## Action
+
+Remove files in reverse order: installer.yaml, locale.en-US.yaml, then main .yaml
+
+## Evidence
+
+- package-removal workflow shows removal of all three manifest files
+- Mirrors the creation process in reverse
+
+---
+id: winget-pkgs-pr-numbers
+trigger: "When committing package changes"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Pr Numbers
+
+## Action
+
+Include PR number in commit message format (#XXXXXX)
+
+## Evidence
+
+- Update: Servo.Servo.Nightly version 1.0 (2026-02-25-vendor-test-4) (#342784)
+- Fix: XnSoft.XnViewMP version 1.9.10.0 (#342759)
+- New version: HydraLauncher.Hydra version 3.9.0 (#342530)
+
