@@ -1,0 +1,445 @@
+# Instincts generated from https://github.com/Baneeishaque/winget-pkgs
+# Generated: 2026-03-01T14:24:44.476Z
+# Version: 2.0
+
+---
+id: winget-pkgs-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Commit Length
+
+## Action
+
+Write moderate-length commit messages (~50 characters)
+
+## Evidence
+
+- Average commit message length: 58 chars
+- Based on 200 commits
+
+---
+id: winget-pkgs-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: winget-pkgs-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: winget-pkgs-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: winget-pkgs-workflow-new-package-version
+trigger: "when doing new package version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow New Package Version
+
+## Action
+
+Follow the new-package-version workflow:
+1. Create new version directory under manifests/{first-letter}/{publisher}/{package}/{version}/
+2. Generate installer.yaml with download URLs and installation info
+3. Create locale.en-US.yaml with English package metadata
+4. Generate main package.yaml with basic package info
+5. Optionally add additional locale files (zh-CN, ja-JP, etc.)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~40x per month
+- Files: manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.installer.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.locale.en-US.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.yaml
+
+---
+id: winget-pkgs-workflow-multilingual-package-release
+trigger: "when doing multilingual package release"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Multilingual Package Release
+
+## Action
+
+Follow the multilingual-package-release workflow:
+1. Create standard installer and main yaml files
+2. Add English locale file (en-US)
+3. Add Chinese locale file (zh-CN) for Chinese market
+4. Optionally add Japanese locale file (ja-JP)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~15x per month
+- Files: manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.locale.en-US.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.locale.zh-CN.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.locale.ja-JP.yaml
+
+---
+id: winget-pkgs-workflow-package-maintenance
+trigger: "when doing package maintenance"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Package Maintenance
+
+## Action
+
+Follow the package-maintenance workflow:
+1. Identify specific manifest file needing updates
+2. Modify installer.yaml for installation fixes
+3. Update locale files for description/metadata improvements
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.installer.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.locale.en-US.yaml
+
+---
+id: winget-pkgs-workflow-package-removal
+trigger: "when doing package removal"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Package Removal
+
+## Action
+
+Follow the package-removal workflow:
+1. Remove installer.yaml file
+2. Remove locale.en-US.yaml file
+3. Remove main package.yaml file
+4. Clean up version directory
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.installer.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.locale.en-US.yaml, manifests/{letter}/{publisher}/{package}/{version}/{publisher}.{package}.yaml
+
+---
+id: winget-pkgs-pascal-case-files
+trigger: "When creating new files in winget-pkgs"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Pascal Case Files
+
+## Action
+
+Use PascalCase naming convention for file names
+
+## Evidence
+
+- Pattern observed in TypeScript codebase
+- Consistent with Windows package naming conventions
+
+---
+id: winget-pkgs-camel-case-functions
+trigger: "When defining functions in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Camel Case Functions
+
+## Action
+
+Use camelCase naming for function names
+
+## Evidence
+
+- Standard TypeScript convention observed
+- Consistent across codebase
+
+---
+id: winget-pkgs-screaming-snake-constants
+trigger: "When defining constants in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- TypeScript naming convention pattern
+- Observed in configuration files
+
+---
+id: winget-pkgs-mixed-imports
+trigger: "When importing modules in TypeScript files"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Mixed Imports
+
+## Action
+
+Use mixed import styles as appropriate for the context
+
+## Evidence
+
+- Mixed import patterns observed in codebase
+
+---
+id: winget-pkgs-separate-tests
+trigger: "When creating tests for winget-pkgs"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Separate Tests
+
+## Action
+
+Place tests in separate test directories, not alongside source files
+
+## Evidence
+
+- Architecture analysis shows testLocation: separate
+- Common pattern in package repositories
+
+---
+id: winget-pkgs-descriptive-commits
+trigger: "When making commits to winget-pkgs"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Descriptive Commits
+
+## Action
+
+Write descriptive commit messages with action prefix and package version details (~58 characters average)
+
+## Evidence
+
+- Fix: Rem0o.FanControl version 260
+- Update: KDE.Marknote version 1.4.1
+- New version: OpenRCT2.OpenRCT2 version 0.4.32
+
+---
+id: winget-pkgs-action-prefixes
+trigger: "When committing changes to winget-pkgs"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Action Prefixes
+
+## Action
+
+Start commit messages with action prefixes like 'Update:', 'Fix:', 'New version:', or 'Modify:'
+
+## Evidence
+
+- Update: KDE.Marknote version 1.4.1
+- Fix: Rem0o.FanControl version 260
+- Modify: VovSoft.SubtitleTranslator version 3.0.0.0
+
+---
+id: winget-pkgs-new-version-workflow
+trigger: "When a software package releases a new version"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs New Version Workflow
+
+## Action
+
+Create version directory structure with installer.yaml, locale.en-US.yaml, and main package.yaml files
+
+## Evidence
+
+- 40+ daily occurrences
+- Consistent pattern in manifests/{letter}/{publisher}/{package}/{version}/ structure
+
+---
+id: winget-pkgs-multilingual-support
+trigger: "When adding packages targeting international markets"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Multilingual Support
+
+## Action
+
+Create additional locale files (zh-CN, ja-JP) alongside the standard en-US locale
+
+## Evidence
+
+- 15+ daily occurrences
+- Pattern of locale.zh-CN.yaml and locale.ja-JP.yaml files
+
+---
+id: winget-pkgs-manifest-fixes
+trigger: "When package metadata needs correction without version changes"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Manifest Fixes
+
+## Action
+
+Modify specific installer.yaml or locale files for fixes and improvements
+
+## Evidence
+
+- ~3 daily occurrences
+- Targeted updates to existing manifest files
+
+---
+id: winget-pkgs-version-removal
+trigger: "When a package version needs removal due to issues or policy violations"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Version Removal
+
+## Action
+
+Remove all associated manifest files (installer.yaml, locale files, main yaml) and clean up directory
+
+## Evidence
+
+- ~1 daily occurrence
+- Complete removal of version directory structure
+
+---
+id: winget-pkgs-manifests-folder
+trigger: "When organizing package files in winget-pkgs"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Manifests Folder
+
+## Action
+
+Place all package manifests under the 'manifests' folder structure
+
+## Evidence
+
+- Common folder 'manifests' identified
+- All workflow examples use manifests/ path
+
+---
+id: winget-pkgs-publisher-structure
+trigger: "When creating package manifest directories"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Publisher Structure
+
+## Action
+
+Use hierarchical structure: manifests/{first-letter}/{publisher}/{package}/{version}/
+
+## Evidence
+
+- Consistent path pattern across all workflows
+- Alphabetical organization by publisher
+
