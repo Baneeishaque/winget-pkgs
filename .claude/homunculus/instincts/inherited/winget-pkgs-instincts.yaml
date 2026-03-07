@@ -1,0 +1,497 @@
+# Instincts generated from https://github.com/Baneeishaque/winget-pkgs
+# Generated: 2026-02-25T20:24:56.176Z
+# Version: 2.0
+
+---
+id: winget-pkgs-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Commit Length
+
+## Action
+
+Write moderate-length commit messages (~50 characters)
+
+## Evidence
+
+- Average commit message length: 58 chars
+- Based on 200 commits
+
+---
+id: winget-pkgs-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: winget-pkgs-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: winget-pkgs-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: winget-pkgs-workflow-new-package-version-basic
+trigger: "when doing new package version basic"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow New Package Version Basic
+
+## Action
+
+Follow the new-package-version-basic workflow:
+1. Create installer.yaml with download URLs and installation instructions
+2. Create locale.en-US.yaml with package metadata in English
+3. Create main package.yaml with version and manifest references
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~15x per month
+- Files: manifests/{publisher}/{package}/{version}/{package}.installer.yaml, manifests/{publisher}/{package}/{version}/{package}.locale.en-US.yaml, manifests/{publisher}/{package}/{version}/{package}.yaml
+
+---
+id: winget-pkgs-workflow-new-package-version-multilingual
+trigger: "when doing new package version multilingual"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow New Package Version Multilingual
+
+## Action
+
+Follow the new-package-version-multilingual workflow:
+1. Create installer.yaml with download URLs and installation instructions
+2. Create multiple locale files for different languages (en-US, zh-CN, de-DE, etc.)
+3. Create main package.yaml with version and manifest references
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~20x per month
+- Files: manifests/{publisher}/{package}/{version}/{package}.installer.yaml, manifests/{publisher}/{package}/{version}/{package}.locale.*.yaml, manifests/{publisher}/{package}/{version}/{package}.yaml
+
+---
+id: winget-pkgs-workflow-firefox-esr-localized-release
+trigger: "when doing firefox esr localized release"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Firefox Esr Localized Release
+
+## Action
+
+Follow the firefox-esr-localized-release workflow:
+1. Create installer.yaml for the specific language variant
+2. Create locale files for multiple languages (de-DE, en-US, zh-CN are standard)
+3. Create main package.yaml linking all components
+4. Repeat for each language variant
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~25x per month
+- Files: manifests/m/Mozilla/Firefox/ESR/{lang}/{version}/Mozilla.Firefox.ESR.{lang}.installer.yaml, manifests/m/Mozilla/Firefox/ESR/{lang}/{version}/Mozilla.Firefox.ESR.{lang}.locale.*.yaml, manifests/m/Mozilla/Firefox/ESR/{lang}/{version}/Mozilla.Firefox.ESR.{lang}.yaml
+
+---
+id: winget-pkgs-workflow-package-update
+trigger: "when doing package update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Package Update
+
+## Action
+
+Follow the package-update workflow:
+1. Modify installer.yaml with updated download URLs or installation parameters
+2. Update locale files with corrected metadata if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: manifests/{publisher}/{package}/{version}/{package}.installer.yaml, manifests/{publisher}/{package}/{version}/{package}.locale.*.yaml
+
+---
+id: winget-pkgs-workflow-package-removal
+trigger: "when doing package removal"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Package Removal
+
+## Action
+
+Follow the package-removal workflow:
+1. Delete installer.yaml file
+2. Delete all locale files for the version
+3. Delete main package.yaml file
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: manifests/{publisher}/{package}/{version}/{package}.installer.yaml, manifests/{publisher}/{package}/{version}/{package}.locale.*.yaml, manifests/{publisher}/{package}/{version}/{package}.yaml
+
+---
+id: winget-pascal-case-files
+trigger: "When creating or naming files in winget-pkgs"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pascal Case Files
+
+## Action
+
+Use PascalCase naming convention for file names
+
+## Evidence
+
+- Pattern observed in TypeScript files
+- Consistent PascalCase usage across codebase
+
+---
+id: winget-camel-case-functions
+trigger: "When defining functions in winget-pkgs TypeScript code"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Camel Case Functions
+
+## Action
+
+Use camelCase naming convention for function names
+
+## Evidence
+
+- TypeScript language standards
+- Function naming patterns in repository
+
+---
+id: winget-pascal-case-classes
+trigger: "When defining classes in winget-pkgs TypeScript code"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pascal Case Classes
+
+## Action
+
+Use PascalCase naming convention for class names
+
+## Evidence
+
+- TypeScript language standards
+- Class naming patterns in repository
+
+---
+id: winget-screaming-snake-constants
+trigger: "When defining constants in winget-pkgs TypeScript code"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE naming convention for constants
+
+## Evidence
+
+- Constant naming patterns observed
+- TypeScript convention adherence
+
+---
+id: winget-commit-prefix-pattern
+trigger: "When making commits to winget-pkgs repository"
+confidence: 0.95
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Commit Prefix Pattern
+
+## Action
+
+Start commit message with action prefix like 'Update:', 'Fix:', 'New version:', 'Modify:', 'ReleaseNotes:'
+
+## Evidence
+
+- Update: Servo.Servo.Nightly version 1.0
+- Fix: XnSoft.XnViewMP version 1.9.10.0
+- New version: JFrog.Conan version 2.26.0
+- Modify: VovSoft.TreeNotes version 2.6.0.0
+- ReleaseNotes: GoTo.LogMeInResolveDesktopConsole version 1.16.0.67
+
+---
+id: winget-commit-version-format
+trigger: "When committing package updates to winget-pkgs"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Commit Version Format
+
+## Action
+
+Include package name and version number in commit message with format 'Action: Publisher.Package version X.X.X'
+
+## Evidence
+
+- Update: Servo.Servo.Nightly version 1.0
+- Fix: XnSoft.XnViewMP version 1.9.10.0
+- New version: Hugo.Hugo.Extended version 0.157.0
+
+---
+id: winget-commit-pr-reference
+trigger: "When making commits to winget-pkgs repository"
+confidence: 0.95
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Commit Pr Reference
+
+## Action
+
+End commit message with PR reference in format '(#XXXXXX)'
+
+## Evidence
+
+- (#342784)
+- (#342759)
+- (#342763)
+- (#342631)
+- (#342780)
+
+---
+id: winget-basic-package-structure
+trigger: "When adding a new basic package version with English-only localization"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Basic Package Structure
+
+## Action
+
+Create three files: {package}.installer.yaml, {package}.locale.en-US.yaml, and {package}.yaml in manifests/{publisher}/{package}/{version}/ directory
+
+## Evidence
+
+- 15 occurrences per day
+- Standard three-file manifest structure
+- Basic localization workflow pattern
+
+---
+id: winget-multilingual-package-structure
+trigger: "When adding a new package version with international language support"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Multilingual Package Structure
+
+## Action
+
+Create installer.yaml, multiple locale.*.yaml files for different languages, and main package.yaml
+
+## Evidence
+
+- 20 occurrences per day
+- Multiple locale files pattern
+- International package support
+
+---
+id: winget-firefox-esr-special-handling
+trigger: "When releasing Mozilla Firefox ESR for language variants"
+confidence: 0.99
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Firefox Esr Special Handling
+
+## Action
+
+Create language-specific manifests in manifests/m/Mozilla/Firefox/ESR/{lang}/{version}/ with standard de-DE, en-US, zh-CN locale files
+
+## Evidence
+
+- 25 occurrences per release
+- Mozilla.Firefox.ESR.ro version 140.8.0
+- Specific Firefox ESR workflow pattern
+
+---
+id: winget-package-update-selective
+trigger: "When updating existing package metadata or installer information"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Package Update Selective
+
+## Action
+
+Modify only the installer.yaml and relevant locale files, do not recreate the entire manifest structure
+
+## Evidence
+
+- 2 occurrences per day
+- Selective file modification pattern
+- Update workflow efficiency
+
+---
+id: winget-package-removal-complete
+trigger: "When removing a package version due to issues or policy violations"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Package Removal Complete
+
+## Action
+
+Delete all three manifest files: installer.yaml, all locale files, and main package.yaml
+
+## Evidence
+
+- 1 occurrence per day
+- Complete manifest cleanup pattern
+- Version removal workflow
+
+---
+id: winget-manifests-folder-organization
+trigger: "When organizing files in winget-pkgs repository"
+confidence: 0.95
+domain: architecture
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Manifests Folder Organization
+
+## Action
+
+Place all package manifests under the 'manifests' folder with publisher/package/version hierarchy
+
+## Evidence
+
+- manifests folder is common across all workflows
+- Consistent folder structure pattern
+- Publisher/package/version hierarchy
+
+---
+id: winget-separate-test-location
+trigger: "When setting up testing in winget-pkgs repository"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Separate Test Location
+
+## Action
+
+Keep tests in separate location from main manifest files
+
+## Evidence
+
+- testLocation: separate in architecture analysis
+- Single-package module organization
+
