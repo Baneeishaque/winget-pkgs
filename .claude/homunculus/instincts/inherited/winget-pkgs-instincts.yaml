@@ -1,0 +1,410 @@
+# Instincts generated from https://github.com/Baneeishaque/winget-pkgs
+# Generated: 2026-04-01T14:23:23.597Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: winget-pkgs-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Commit Length
+
+## Action
+
+Write moderate-length commit messages (~57 characters)
+
+## Evidence
+
+- Average commit message length: 57 chars
+- Based on 200 commits
+
+---
+id: winget-pkgs-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: winget-pkgs-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: winget-pkgs-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: winget-pkgs-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: winget-pkgs-workflow-add-new-package-version
+trigger: "when doing add new package version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Add New Package Version
+
+## Action
+
+Follow the add-new-package-version workflow:
+1. Create a new directory under manifests/<first-letter>/<Publisher>/<Package>/<Version>/
+2. Add <Package>.installer.yaml with installer metadata
+3. Add one or more <Package>.locale.<locale>.yaml files for supported languages
+4. Add <Package>.yaml with general package metadata
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~40x per month
+- Files: manifests/*/*/*/*/*/*.installer.yaml, manifests/*/*/*/*/*/*.locale.*.yaml, manifests/*/*/*/*/*/*.yaml
+
+---
+id: winget-pkgs-workflow-update-existing-package-manifest
+trigger: "when doing update existing package manifest"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Update Existing Package Manifest
+
+## Action
+
+Follow the update-existing-package-manifest workflow:
+1. Edit existing <Package>.installer.yaml and/or <Package>.locale.<locale>.yaml files in the version directory
+2. Commit changes with a message indicating the update
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: manifests/*/*/*/*/*/*.installer.yaml, manifests/*/*/*/*/*/*.locale.*.yaml
+
+---
+id: winget-pkgs-workflow-remove-unsupported-package-version
+trigger: "when doing remove unsupported package version"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Remove Unsupported Package Version
+
+## Action
+
+Follow the remove-unsupported-package-version workflow:
+1. Delete <Package>.installer.yaml and related locale and main yaml files from the version directory
+2. Commit with a message indicating removal
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: manifests/*/*/*/*/*/*.installer.yaml, manifests/*/*/*/*/*/*.locale.*.yaml, manifests/*/*/*/*/*/*.yaml
+
+---
+id: winget-pkgs-instinct-file-naming
+trigger: "When creating or renaming files in the repository"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct File Naming
+
+## Action
+
+Use PascalCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files: PascalCase
+
+---
+id: winget-pkgs-instinct-function-naming
+trigger: "When defining functions in C# code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: winget-pkgs-instinct-class-naming
+trigger: "When defining classes in C# code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: winget-pkgs-instinct-constant-naming
+trigger: "When defining constants in C# code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constants
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: winget-pkgs-instinct-import-style
+trigger: "When importing modules in C# code"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: winget-pkgs-instinct-export-style
+trigger: "When exporting modules or symbols in C# code"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: winget-pkgs-instinct-git-commit-prefix-update
+trigger: "When committing changes that update a package or its metadata"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Git Commit Prefix Update
+
+## Action
+
+Start the commit message with 'Update:' or 'New version:'
+
+## Evidence
+
+- Seen in commit: 'Update: TandemHealth.Tandem version 2026.4.1...'
+- Seen in commit: 'New version: Zoho.Ulaa version 146.0.7680.177...'
+
+---
+id: winget-pkgs-instinct-git-commit-format-version
+trigger: "When committing a new package version"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Git Commit Format Version
+
+## Action
+
+Include the package name and version in the commit message
+
+## Evidence
+
+- Seen in commit: 'New version: BlastWave.BlastShield version 1.13.2...'
+- Pattern in commit examples
+
+---
+id: winget-pkgs-instinct-add-new-package-version
+trigger: "When someone wants to publish a new version of a package"
+confidence: 0.99
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Add New Package Version
+
+## Action
+
+Create a new directory under manifests/<first-letter>/<Publisher>/<Package>/<Version>/, add <Package>.installer.yaml, add <Package>.locale.<locale>.yaml files, and add <Package>.yaml
+
+## Evidence
+
+- Workflow: add-new-package-version
+- Commit sequence and file patterns in workflow example
+
+---
+id: winget-pkgs-instinct-update-existing-package-manifest
+trigger: "When someone wants to update metadata (e.g., URLs) for an existing package version"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Update Existing Package Manifest
+
+## Action
+
+Edit <Package>.installer.yaml and/or <Package>.locale.<locale>.yaml in the version directory and commit with an update message
+
+## Evidence
+
+- Workflow: update-existing-package-manifest
+- Commit sequence and file patterns in workflow example
+
+---
+id: winget-pkgs-instinct-remove-unsupported-package-version
+trigger: "When someone wants to deprecate or remove a package version from the repository"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Remove Unsupported Package Version
+
+## Action
+
+Delete <Package>.installer.yaml and related locale and main yaml files from the version directory and commit with a removal message
+
+## Evidence
+
+- Workflow: remove-unsupported-package-version
+- Commit sequence and file patterns in workflow example
+
+---
+id: winget-pkgs-instinct-test-location
+trigger: "When adding or updating tests for a package"
+confidence: 0.6
+domain: testing
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Test Location
+
+## Action
+
+Place test files in a separate location from source files
+
+## Evidence
+
+- architecture.testLocation: separate
+
