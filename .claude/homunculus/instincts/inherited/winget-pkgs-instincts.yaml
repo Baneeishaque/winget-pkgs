@@ -1,0 +1,344 @@
+# Instincts generated from https://github.com/Baneeishaque/winget-pkgs
+# Generated: 2026-04-01T08:23:08.397Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: winget-pkgs-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Commit Length
+
+## Action
+
+Write moderate-length commit messages (~58 characters)
+
+## Evidence
+
+- Average commit message length: 58 chars
+- Based on 200 commits
+
+---
+id: winget-pkgs-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: winget-pkgs-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: winget-pkgs-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: winget-pkgs-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: winget-pkgs-workflow-add-or-update-package-version
+trigger: "when doing add or update package version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Workflow Add Or Update Package Version
+
+## Action
+
+Follow the add-or-update-package-version workflow:
+1. Create a new directory under manifests/<first-letter>/<Publisher>/<PackageName>/<Version>/
+2. Add <PackageId>.installer.yaml manifest file for the installer details
+3. Add <PackageId>.locale.en-US.yaml manifest file for English locale metadata
+4. Optionally add additional locale YAML files (e.g., .locale.zh-CN.yaml, .locale.ja-JP.yaml, .locale.pt-BR.yaml) if the package supports multiple languages
+5. Add <PackageId>.yaml manifest file for general package metadata
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1000x per month
+- Files: manifests/<first-letter>/<Publisher>/<PackageName>/<Version>/<PackageId>.installer.yaml, manifests/<first-letter>/<Publisher>/<PackageName>/<Version>/<PackageId>.locale.en-US.yaml, manifests/<first-letter>/<Publisher>/<PackageName>/<Version>/<PackageId>.locale.<other>.yaml
+
+---
+id: winget-pkgs-instinct-cs-class-naming
+trigger: "When creating a new class in C# code"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Cs Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes: PascalCase
+
+---
+id: winget-pkgs-instinct-cs-function-naming
+trigger: "When defining a function/method in C# code"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Cs Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions: camelCase
+
+---
+id: winget-pkgs-instinct-cs-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Cs File Naming
+
+## Action
+
+Name the file using PascalCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files: PascalCase
+
+---
+id: winget-pkgs-instinct-cs-constant-naming
+trigger: "When declaring a constant in C# code"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Cs Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: winget-pkgs-instinct-cs-import-style
+trigger: "When importing modules in C# code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Cs Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle: relative
+
+---
+id: winget-pkgs-instinct-cs-export-style
+trigger: "When exporting modules or classes in C# code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Cs Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle: named
+
+---
+id: winget-pkgs-instinct-git-commit-prefix-update
+trigger: "When committing a change that updates or adds a package version"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Git Commit Prefix Update
+
+## Action
+
+Start the commit message with 'Update:' or 'New version:' followed by the package name and version
+
+## Evidence
+
+- Seen in commit: 'Update: Servo.Servo.Nightly version 1.0 (2026-03-31) (#354292)'
+- Seen in commit: 'New version: tree-sitter.tree-sitter-cli version 0.26.8 (#354230)'
+
+---
+id: winget-pkgs-instinct-git-commit-length
+trigger: "When writing a commit message for a package update"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Git Commit Length
+
+## Action
+
+Keep the commit message concise, around 58 characters on average
+
+## Evidence
+
+- commits.averageLength: 58
+
+---
+id: winget-pkgs-instinct-workflow-add-update-package
+trigger: "When a new version of a package needs to be added or updated in the repository"
+confidence: 0.99
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Workflow Add Update Package
+
+## Action
+
+Create a new directory under manifests/<first-letter>/<Publisher>/<PackageName>/<Version>/ and add the required YAML manifest files: <PackageId>.installer.yaml, <PackageId>.locale.en-US.yaml, optional additional locale files, and <PackageId>.yaml
+
+## Evidence
+
+- Workflow: add-or-update-package-version
+- Example commit sequence and files in workflow description
+
+---
+id: winget-pkgs-instinct-workflow-optional-locales
+trigger: "When adding a package version that supports multiple languages"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Workflow Optional Locales
+
+## Action
+
+Add additional <PackageId>.locale.<other>.yaml files for each supported locale
+
+## Evidence
+
+- Workflow: add-or-update-package-version, step: Optionally add additional locale YAML files
+
+---
+id: winget-pkgs-instinct-architecture-manifests-folder
+trigger: "When adding or updating package manifests"
+confidence: 0.95
+domain: architecture
+source: repo-analysis
+source_repo: Baneeishaque/winget-pkgs
+---
+
+# Winget Pkgs Instinct Architecture Manifests Folder
+
+## Action
+
+Place all manifest files under the 'manifests' folder following the structure manifests/<first-letter>/<Publisher>/<PackageName>/<Version>/
+
+## Evidence
+
+- architecture.folderStructure.commonFolders: manifests
+- Workflow: add-or-update-package-version
+
