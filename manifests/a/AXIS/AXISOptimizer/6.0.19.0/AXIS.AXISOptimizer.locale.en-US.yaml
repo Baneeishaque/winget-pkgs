@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.12.0.schema.json
 
 PackageIdentifier: AXIS.AXISOptimizer
-PackageVersion: 6.0.10.0
+PackageVersion: 6.0.19.0
 PackageLocale: en-US
 Publisher: Axis Communications
 PublisherUrl: https://www.axis.com/
@@ -31,18 +31,13 @@ Description: |-
   Save time and effort
   It helps optimize both Axis-Milestone systems and daily workflows, saving you considerable time and effort. Discover your savings for a range of daily workflows.
 ReleaseNotes: |-
-  - [Feature] Speaker manager: In Pro mode, operator can now select a
-    custom visual profile or use a custom text when paging.
-  - [Feature] Axis actions: Visual profile and text is now supported for
-    audio clip actions (only supported when using AXIS Audio Manager Pro).
-  - [Improvement] Visitor management: Support receiving calls from AXIS
-    Q9307-LV Dome Camera
-  - [Fix] Speaker manager: Fix audio clip upload failure on Axis OS 12+
-  - [Fix] License plate list management: Workaround for AXIS License Plate
-    Verifier web fails to start after adding a license plate containing
-    only numbers.
-  - [Fix] Minor fixes for license plate list management
-  - [Fix] Access control: Correct door state icons for monitored doors
+  - [Improvement] Speaker manager: Remove audio clips not available in the
+    local audio library for speaker groups (Edge and Legacy mode)
+  - [Fix] Dewarp view: Stability improvmements targeting Intel Graphics
+    GPU clients
+  - [Fix] Device assistant: Refixed problem with devices using same
+    IP/host but different ports only showed once in list.
+  - [Fix] Axis actions: Fix problem with missing operator controls
 ReleaseNotesUrl: https://www.axis.com/ftp/pub_soft/cam_srv/optimizer_milestone/latest/relnote.txt
 ManifestType: defaultLocale
 ManifestVersion: 1.12.0
