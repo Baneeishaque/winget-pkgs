@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.12.0.schema.json
 
 PackageIdentifier: Clockify.Clockify
-PackageVersion: 2.3.0
+PackageVersion: 2.3.1
 PackageLocale: en-US
 Publisher: COING Inc.
 PublisherUrl: https://clockify.me/
@@ -22,7 +22,14 @@ Tags:
 - timer
 - tracker
 - work
-ReleaseNotes: "- Aligned with the web's Aggregated Time Zone feature."
+ReleaseNotes: |-
+  What's new
+  - Added a default task option alongside the default project, allowing users to select a default task as well.
+  What's fixed
+  - Fixed an issue where keyboard shortcuts stopped working after the app was restarted.
+  - Fixed an issue where the auto-tracker would crash on specific dates and in specific time zones.
+  - Resolved a bug where the 'Update now' banner was not working when updating to newer versions.
+  - Fixed an issue where the timer would not stop when the PC shuts down.
 ReleaseNotesUrl: https://clockify.me/help/whats-new
 Documentations:
 - DocumentLabel: Tutorials
