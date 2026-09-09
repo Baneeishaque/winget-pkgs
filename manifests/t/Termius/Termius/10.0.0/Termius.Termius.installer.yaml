@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
 
 PackageIdentifier: Termius.Termius
-PackageVersion: 9.43.1
+PackageVersion: 10.0.0
 InstallerType: nullsoft
 Scope: user
 InstallerSwitches:
@@ -12,13 +12,13 @@ Protocols:
 - ssh
 - terminus
 ProductCode: 4f53adaa-a4b2-50c1-b605-e304e4d14011
-ReleaseDate: 2026-08-12
+ReleaseDate: 2026-09-09
 Installers:
 - Architecture: x86
   InstallerUrl: https://autoupdate.termius.com/windows/Install%20Termius.exe
-  InstallerSha256: 43BC1D415993253BD42976FEE150CC150CEA57E75B1C90A4083E33F9F3267575
+  InstallerSha256: 9A8A8123527423C123AFBFE63DDA4CB87676B3F133321E2C65EB401F0A4CD8CA
 - Architecture: x64
   InstallerUrl: https://autoupdate.termius.com/windows/Install%20Termius.exe
-  InstallerSha256: 43BC1D415993253BD42976FEE150CC150CEA57E75B1C90A4083E33F9F3267575
+  InstallerSha256: 9A8A8123527423C123AFBFE63DDA4CB87676B3F133321E2C65EB401F0A4CD8CA
 ManifestType: installer
 ManifestVersion: 1.12.0
