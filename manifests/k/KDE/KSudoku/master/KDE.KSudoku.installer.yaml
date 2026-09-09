@@ -6,17 +6,18 @@ PackageVersion: master
 InstallerType: nullsoft
 UpgradeBehavior: install
 ProductCode: ksudoku
+ReleaseDate: 2026-09-04
 Installers:
 - Architecture: x64
   Scope: user
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/ksudoku/master/windows/ksudoku-master-1023-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: 0007DD3799C921D018C46435BAAE6F1197459B20E0A9181BBADFC660A82BE2E7
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/ksudoku/master/windows/ksudoku-master-1099-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: FEABC79C8CF538667936A92DFEE51A8A539E3D6B7DCD59BBF547956F98117E01
   InstallerSwitches:
     Custom: /CurrentUser
 - Architecture: x64
   Scope: machine
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/ksudoku/master/windows/ksudoku-master-1023-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: 0007DD3799C921D018C46435BAAE6F1197459B20E0A9181BBADFC660A82BE2E7
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/ksudoku/master/windows/ksudoku-master-1099-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: FEABC79C8CF538667936A92DFEE51A8A539E3D6B7DCD59BBF547956F98117E01
   InstallerSwitches:
     Custom: /AllUsers
 ManifestType: installer

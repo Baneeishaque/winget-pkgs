@@ -6,17 +6,18 @@ PackageVersion: master
 InstallerType: nullsoft
 UpgradeBehavior: install
 ProductCode: kmines
+ReleaseDate: 2026-09-04
 Installers:
 - Architecture: x64
   Scope: user
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/kmines/master/windows/kmines-master-952-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: D074FD95AB7017A939C2868745435E945DB834AABBBC8026538E90C07BDFCBE9
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/kmines/master/windows/kmines-master-1040-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 763FD8F7632022D16D024A19178A4FF6A2813E54DE63DAB2947FD508DC7A87CF
   InstallerSwitches:
     Custom: /CurrentUser
 - Architecture: x64
   Scope: machine
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/kmines/master/windows/kmines-master-952-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: D074FD95AB7017A939C2868745435E945DB834AABBBC8026538E90C07BDFCBE9
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/kmines/master/windows/kmines-master-1040-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 763FD8F7632022D16D024A19178A4FF6A2813E54DE63DAB2947FD508DC7A87CF
   InstallerSwitches:
     Custom: /AllUsers
 ManifestType: installer

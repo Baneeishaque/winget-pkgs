@@ -6,17 +6,18 @@ PackageVersion: master
 InstallerType: nullsoft
 UpgradeBehavior: install
 ProductCode: katomic
+ReleaseDate: 2026-09-04
 Installers:
 - Architecture: x64
   Scope: user
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/katomic/master/windows/katomic-master-885-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: 5685DA9FC9A695E3E438D9013BEE50976F550ACDFE9C999292AD9C88F6ADD554
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/katomic/master/windows/katomic-master-938-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 871CE0C48C2E978CDBA624D355DED09798CF135B3D280276FB158C1F9EB5A205
   InstallerSwitches:
     Custom: /CurrentUser
 - Architecture: x64
   Scope: machine
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/katomic/master/windows/katomic-master-885-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: 5685DA9FC9A695E3E438D9013BEE50976F550ACDFE9C999292AD9C88F6ADD554
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/katomic/master/windows/katomic-master-938-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 871CE0C48C2E978CDBA624D355DED09798CF135B3D280276FB158C1F9EB5A205
   InstallerSwitches:
     Custom: /AllUsers
 ManifestType: installer
