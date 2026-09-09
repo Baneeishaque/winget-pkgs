@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.12.0.schema.json
 
 PackageIdentifier: Floweb.Floweb
-PackageVersion: 1.8.2
+PackageVersion: 1.8.3
 PackageLocale: en-US
 Publisher: floweb
 PublisherUrl: https://www.floweb.cn/en
@@ -19,7 +19,7 @@ Tags:
 - prc
 - web
 - webpage
-ReleaseNotes: "\U0001F31F More reliable edge-hide on multiple displays: when a secondary screen sits left of or slightly above the primary, windows tucked to the left or top edge peek out flush with that screen; Moving the cursor away tucks the window again, and it no longer pops out immediately after hiding; Repeatedly tucking at the top no longer nudges the window to the right."
+ReleaseNotes: "\U0001F31F Lock a transparent window for click-through desktop widgets: the tray submenu and home icon menu can unlock, pin always on top, or pin always on bottom; Locking hides the toolbar so the page fills the window."
 PurchaseUrl: https://www.floweb.cn/en
 ManifestType: defaultLocale
 ManifestVersion: 1.12.0
